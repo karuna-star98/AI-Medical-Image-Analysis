@@ -130,5 +130,6 @@ def build_parser():
 
 
 if __name__ == "__main__":
-    args = build_parser().parse_args()
-    args.func(args)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    create_app().run(host="0.0.0.0", port=port, debug=False)
