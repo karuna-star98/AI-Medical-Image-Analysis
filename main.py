@@ -129,7 +129,6 @@ def build_parser():
     return p
 
 
-```python
 if __name__ == "__main__":
     ensure_dirs()
     parser = build_parser()
