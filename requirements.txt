@@ -1,0 +1,8 @@
+# Python 3.10 - 3.12 recommended
+tensorflow>=2.16
+numpy>=1.26
+opencv-python>=4.9
+matplotlib>=3.8
+scikit-learn>=1.4
+flask>=3.0
+pytest>=8.0   # optional: for tests/

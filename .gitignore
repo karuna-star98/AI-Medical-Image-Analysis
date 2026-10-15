@@ -1,0 +1,21 @@
+# Environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Datasets (too large for GitHub - see data/README.md)
+data/chest_xray/
+data/simulated/
+data/*.zip
+
+# Trained models (large) - keep the folder only
+models/*.keras
+models/*.h5
+!models/.gitkeep
+
+# Raw run outputs - copy your best results into images/ to showcase them
+outputs/*
+!outputs/.gitkeep
