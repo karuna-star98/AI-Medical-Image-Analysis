@@ -129,7 +129,14 @@ def build_parser():
     return p
 
 
+```python
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))
-    create_app().run(host="0.0.0.0", port=port, debug=False)
+    ensure_dirs()
+    parser = build_parser()
+    args = parser.parse_args()
+
+    if args.command == "serve":
+        args.host = "0.0.0.0"
+        args.port = int(os.environ.get("PORT", args.port))
+
+    args.func(args)
